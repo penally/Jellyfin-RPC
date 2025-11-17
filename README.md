@@ -79,6 +79,11 @@ Create a `.env` file in the project root:
 # Discord Application Settings
 DISCORD_CLIENT_ID=your_discord_client_id_here
 
+# Selfbot Settings (Optional - Discord Desktop does not need to be running)
+# WARNING: Selfbots violate Discord's Terms of Service - use at your own risk
+USE_SELFBOT=false
+SELFBOT_TOKEN=your_discord_user_token_here
+
 # Jellyfin Server Settings
 JELLYFIN_SERVER_URL=http://localhost:8096
 JELLYFIN_USER_ID=your_jellyfin_user_id_here
@@ -86,6 +91,9 @@ JELLYFIN_API_KEY=your_jellyfin_api_key_here
 
 # Update interval in milliseconds (default: 5000 = 5 seconds)
 UPDATE_INTERVAL=5000
+
+# Last.fm integration (Optional)
+LASTFM_USERNAME=your_lastfm_user_here
 ```
 
 **Important:** Replace all placeholder values with your actual credentials!
@@ -189,10 +197,14 @@ X-Emby-Authorization: MediaBrowser Client="Jellyfin Mobile RPC", Device="PC", De
 | Variable | Description | Required | Default |
 |----------|-------------|----------|---------|
 | `DISCORD_CLIENT_ID` | Your Discord Application ID | Yes | - |
+| `USE_SELFBOT` | Use Discord selfbot instead of official RPC | No | `false` |
+| `SELFBOT_TOKEN` | Discord user token for selfbot mode | No | - |
 | `JELLYFIN_SERVER_URL` | Your Jellyfin server URL | Yes | `http://localhost:8096` |
 | `JELLYFIN_USER_ID` | Your Jellyfin user UUID | Yes | - |
 | `JELLYFIN_API_KEY` | Your Jellyfin API key | Yes | - |
 | `UPDATE_INTERVAL` | How often to check for updates (ms) | No | `5000` |
+| `LASTFM_USERNAME` | Your Last.fm username for scrobbling integration | No | - |
+|
 
 ## Troubleshooting
 
