@@ -1,0 +1,30 @@
+{
+  "name": "jellyfin-mobile-rpc",
+  "version": "1.0.0",
+  "description": "Discord Rich Presence for Jellyfin mobile playback status",
+  "main": "bin/jellyfin-rpc.js",
+  "type": "commonjs",
+  "bin": {
+    "jellyfin-rpc": "./bin/jellyfin-rpc.js",
+    "get-user-id": "./bin/get-user-id.js"
+  },
+  "scripts": {
+    "start": "node bin/jellyfin-rpc.js",
+    "dev": "node bin/jellyfin-rpc.js",
+    "get-user-id": "node bin/get-user-id.js"
+  },
+  "keywords": [
+    "discord",
+    "rpc",
+    "jellyfin",
+    "rich-presence"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "discord-rpc": "^4.0.1",
+    "discord.js-selfbot-v13": "^2.14.12",
+    "dotenv": "^16.3.1"
+  }
+}
